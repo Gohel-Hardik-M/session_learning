@@ -15,7 +15,7 @@ public class Account {
         id=1;
         name="Hardik";
         accountNo=10000000 + random.nextInt(90000000);
-        balance=10000000;
+        balance=00000;
         accountType="Savings";
     }
 

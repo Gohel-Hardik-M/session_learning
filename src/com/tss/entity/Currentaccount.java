@@ -1,7 +1,7 @@
 package com.tss.entity;
 
 public class Currentaccount extends Account{
-    int draft = 5000;
+    private  int draft = 5000;
 
     public  boolean withdraw(int ammount){
         if ((getBalance()-ammount)<-5000){
@@ -20,6 +20,7 @@ public class Currentaccount extends Account{
         }
     }
 
+
     public  int deposite(int ammount){
         if (draft<5000){
             if(ammount>(5000-draft)){
@@ -37,4 +38,9 @@ public class Currentaccount extends Account{
         return getBalance();
 
     }
+
+    public int displayDraft(){
+        return  draft;
+    }
+
 }
