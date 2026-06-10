@@ -2,8 +2,8 @@ package com.tss.entity;
 
 public class Box {
    private   double width;
-     private double height;
-    private double depth;
+   private double height;
+   private double depth;
 
     public Box(){
         width=10;
@@ -26,6 +26,15 @@ public class Box {
         System.out.println("Height ="+height);
         System.out.println("Width ="+width);
         System.out.println("Depth ="+depth);
+    }
+
+    @Override
+    public String toString() {
+        return "Box{" +
+                "width=" + width +
+                ", height=" + height +
+                ", depth=" + depth +
+                '}';
     }
 
 

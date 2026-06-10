@@ -31,7 +31,7 @@ public class Account {
     public  void  setAccountType(String accountType){this.accountType=accountType; this.accountNo= 10000000 + random.nextInt(90000000);}
     public  void  setBalance(int ammount){this.balance=ammount;}
 
-    public void  deposite(int ammount){this.balance +=ammount;}
+    public int  deposite(int ammount){this.balance +=ammount; return getBalance();}
     public void accountDetails(){
         System.out.println("Account No :"+accountNo);
         System.out.println("Account Holder :"+name);
@@ -39,6 +39,9 @@ public class Account {
         System.out.println("Balance : ******");
     }
 
+    public int getBalance() {
+        return balance;
+    }
 
     public boolean withdraw(int ammount){
         if(balance>ammount){

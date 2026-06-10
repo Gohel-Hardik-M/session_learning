@@ -1,6 +1,8 @@
 package com.tss.test;
 
 import com.tss.entity.Account;
+import com.tss.entity.Currentaccount;
+import com.tss.entity.Savingsaccount;
 
 import java.util.Scanner;
 
@@ -14,14 +16,21 @@ public class AccountTest {
         System.out.println("                                        STATE BANK OF INDIA            ");
         System.out.println("----------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("----------------------------------------------------------------------------------------------------------------------------------");
-
+        Scanner sc = new Scanner(System.in);
         System.out.println();
         Account a1 = new Account();
+
+        System.out.println("Enter Account Type (Savings - 1, Current - 2) :");
+        if(sc.nextInt()==1){
+            Savingsaccount s1 = new Savingsaccount();
+        }
+        else {
+            Currentaccount c1 = new Currentaccount();
+        }
         System.out.println("Enter Your Name :");
-        Scanner sc = new Scanner(System.in);
         a1.setName(sc.nextLine());
-        System.out.println("Enter Account Type :");
-        a1.setAccountType(sc.nextLine());
+
+
         System.out.println("Enter Balance :");
         a1.setBalance(sc.nextInt());
 
